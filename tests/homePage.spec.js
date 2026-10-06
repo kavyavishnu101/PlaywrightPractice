@@ -1,3 +1,5 @@
+// GitHub Actions CI test
+
 const { test, expect } = require('@playwright/test');
 const { users } = require('./credentials');
 
