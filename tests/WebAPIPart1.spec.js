@@ -7,9 +7,9 @@ const { APIUtils} = require('../utils/APIUtils');
 const payLoad = {userEmail: 'kavyavishnu@gmail.com',
       userPassword: 'Kavya@123'}
 let token; //to access everywhere
-const orderId;
 
-const orderPayload = {orders: [{country: "India", productOrderedId: "6960eae1c941646b7a8b3ed3"}]}
+const orderPayload = {orders: 
+  [{country: "India", productOrderedId: "6960eae1c941646b7a8b3ed3"}]}
 
 test.beforeAll(async () => {
     //Login API
@@ -41,7 +41,6 @@ const orderResponse = await apiContext.post('https://rahulshettyacademy.com/api/
 )
 
 const orderResponseJSON = await orderResponse.json();
-orderId = orderResponseJSON.orders[0];
 
 });
 
